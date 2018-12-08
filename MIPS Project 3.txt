@@ -6,6 +6,7 @@
   invalid: .asciiz "Invalid base-33 number."
 
 .text
+
 ErrorLong:
 #prints message for input that is too long
   la $a0, long
@@ -27,6 +28,7 @@ ErrorEmpty:
   syscall
   j end
 
+.globl main
 main:
   li $v0, 8
   la $a0, userInput
