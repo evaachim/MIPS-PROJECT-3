@@ -29,6 +29,7 @@ ErrorEmpty:
   j end
 
 .globl main
+
 main:
   li $v0, 8
   la $a0, userInput
@@ -185,3 +186,5 @@ syscall
 end:   #prints result
  li $v0, 10
  syscal
+
+jr $ra   #return
