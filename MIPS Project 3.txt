@@ -185,6 +185,6 @@ syscall
 #last system call of the program will end program
 end:   #prints result
  li $v0, 10
- syscal
+ syscalL
 
 jr $ra   #return
