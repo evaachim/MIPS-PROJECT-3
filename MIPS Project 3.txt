@@ -22,6 +22,8 @@ Must:
 addi $sp, $sp, -12
 sw $ra, 3($sp)
 sw $ra, 2($sp)
+sw $ra, 1($sp)
+sw $ra, 0($sp)
 translate:
 lb $s7, 0($a0)   #loads digits
 beqz $s7, final  #final conversion step
