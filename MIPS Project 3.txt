@@ -18,6 +18,10 @@ add $s0, $s0, $t0
 addi $s0, $s0, -1 #decrement	
 #load immediate puts values in registers to be used
 
+Must:
+addi $sp, $sp, -12
+sw $ra, 3($sp)
+sw $ra, 2($sp)
 translate:
 lb $s7, 0($a0)   #loads digits
 beqz $s7, final  #final conversion step
