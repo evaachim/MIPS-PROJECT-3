@@ -28,6 +28,11 @@ jal Must
 
 ExitMust:
 
+lw  $ra,0($sp)
+lw $s4, 3($sp) 
+lw $s5, 2($sp)
+lw  $s6, 1($sp)
+lw $s1, 0($sp)
 translate:
 lb $s7, 0($a0)   #loads digits
 beqz $s7, final  #final conversion step
