@@ -62,7 +62,7 @@ j verify
 
 #checks inputs
 verify:
-lb $s3, 0($a0)  #loads address here
+lw $s3, 8($sp)  #loads address here  ################
 beqz $s3, initial
 beq $s3, $t1, initial
 slti $t3, $s3, 48                 #invalid for anything below 0
