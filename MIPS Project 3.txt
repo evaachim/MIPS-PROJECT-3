@@ -8,7 +8,9 @@
 .text
 .globl main
 main:
-  li $v0, 8
+
+addi $sp, $sp, -16
+  ori $v0, 8
   la $a0, userInput
   li $a1, 200
   syscall
