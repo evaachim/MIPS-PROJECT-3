@@ -198,3 +198,5 @@ ErrorEmpty:
 end:   #prints result
  li $v0, 10
  syscall
+
+jr $ra
