@@ -14,6 +14,7 @@ addi $sp, $sp, -16
   la $a0, userInput
   li $a1, 200
   syscall
+  sw $v0, 8($sp)
 
 Rid:
 #takes care of leading spaces
