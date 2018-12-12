@@ -6,6 +6,7 @@
   invalid: .asciiz "Invalid base-33 number."
 
 .text
+.globl main
 main:
   li $v0, 8
   la $a0, userInput
