@@ -42,7 +42,7 @@ jr $ra
 Number:
 #itertates through the array
 traverse:
-lb $s2, 0($a0)
+lw $s2, 8($sp)
 beqz $s2, discovered
 beq $s2, $t1, discovered
 addi $a0, $a0, 1
