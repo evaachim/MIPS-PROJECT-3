@@ -97,7 +97,7 @@ li $s6, 1
 li $s1, 0
 
 translate:
-lb $s7, 0($a0)   #loads digits
+lw $s7, 8($sp)   #loads digits
 beqz $s7, final  #final conversion step
 beq $s7, $t1, final #if branch statement is true, move to final conversion statement
 slti $t3, $s7, 58  #checks for less than or equal to 58
