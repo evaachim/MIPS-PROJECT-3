@@ -6,14 +6,6 @@
   invalid: .asciiz "Invalid base-33 number."
 
 .text
-
-ErrorEmpty:
-#prints message for empty string
-  la $a0, empty
-  li $v0, 4
-  syscall
-  j end
-
 main:
   li $v0, 8
   la $a0, userInput
