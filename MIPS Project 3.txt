@@ -171,6 +171,12 @@ li $v0, 1
 move $a0, $t5  #moves content to $a0 so it can be printed
 syscall
 
+
+ErrorLong:
+#prints message for input that is too long
+  la $a0, long
+  li $v0, 4
+  syscall
 #last system call of the program will end program
 end:   #prints result
  li $v0, 10
