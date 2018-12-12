@@ -177,6 +177,12 @@ ErrorLong:
   la $a0, long
   li $v0, 4
   syscall
+ErrorEmpty:
+#prints message for empty string
+  la $a0, empty
+  li $v0, 4
+  syscall
+  j end
 #last system call of the program will end program
 end:   #prints result
  li $v0, 10
