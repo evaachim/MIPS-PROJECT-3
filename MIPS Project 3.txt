@@ -81,7 +81,7 @@ bgt $s3, 119, ErrorInvalid   # illegal input, out of range
 
 #now I iterate again, this time to check for invalid input
 Move:
-addi $a0, $a0, 1 #iterates
+addi $sp, $sp, 24 #restore stack
 j verify #goes to verification point
 
 #first step of conversion, does the prerequisite work for translation 
