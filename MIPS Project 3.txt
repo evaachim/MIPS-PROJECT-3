@@ -48,7 +48,9 @@ Base:
 addi $s7, $s7, -48  #conversion for regular numbers
 j row
 
-move $a0, $v0
+Mari:
+addi $s7, $s7, -55  #conversion for upper case
+j row
 li $v0, 1
  syscall
 li $v0, 10
