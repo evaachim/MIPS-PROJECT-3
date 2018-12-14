@@ -155,6 +155,14 @@ jal power
 mul $v0, $a0, $v0
 mult $v0,$s6 
 
+last: 
+addi $sp, $sp, -12
+sw $ra, 0($sp)
+addi $a1, $a1, -1
+jal power
+mul $v0, $a0, $v0
+mult $v0,$s1
+mflo $s1
 
 
 final:                  #final step
