@@ -11,6 +11,13 @@ ErrorLong:
   li $v0, 4
   syscall
   j end
+
+ErrorInvalid:
+#prints message for invalid input
+  la $a0, invalid
+  li $v0, 4
+  syscall
+  j end
 main:
 
   la $a0, userInput
