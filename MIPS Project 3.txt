@@ -189,6 +189,9 @@ mul $v0, $a0, $v0
 mult $v0,$s1
 mflo $s1
 
+lw $ra, 0($sp)
+addi $sp, $sp, 12
+jr $ra
 
 final:                  #final step
 li $v0, 1
