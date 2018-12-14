@@ -70,6 +70,10 @@ beq $s0, $s4, one
 beq $s0, $s5, two
 beq $s0, $s6, three
 beq $s0, $s1, last
+one:
+li $t6, 35937   #values to multiply by for the power of 3
+mult $s7, $t6
+mflo $t7
 final:                  #final step
 li $v0, 1
 move $a0, $t5  #moves content to $a0 so it can be printed
