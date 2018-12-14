@@ -65,6 +65,11 @@ j row
 Mici:
 addi $s7, $s7, -87  #conversion for lower case
 
+row:  #determines which digit needs to be converted
+beq $s0, $s4, one  
+beq $s0, $s5, two
+beq $s0, $s6, three
+beq $s0, $s1, last
 final:                  #final step
 li $v0, 1
 move $a0, $t5  #moves content to $a0 so it can be printed
