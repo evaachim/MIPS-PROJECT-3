@@ -133,12 +133,6 @@ bgt $s3, 119, ErrorInvalid   # illegal input, out of range
 Move:
 addi $a0, $a0, 1 #iterates
 j verify #goes to verification point
-addi $s0, $s0, -1 #decrement	
-#load immediate puts values in registers to be used
-li $s4, 3  #each digit
-li $s5, 2
-li $s6, 1
-li $s1, 0
 jal Function
 
 Finish:
