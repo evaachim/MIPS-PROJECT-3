@@ -60,8 +60,10 @@ add $t2, $t2, $a0
 
 #itertates through the array
 traverse:
+lb $s2, 0($a0)
 beqz $s2, discovered
 beq $s2, $t1, discovered
+addi $a0, $a0, 1
 addi $t0, $t0, 1
 j traverse
 
@@ -78,6 +80,7 @@ j verify
 
 #checks inputs
 verify:
+lb $s3, 0($a0)  #loads address here
 beqz $s3, initial
 beq $s3, $t1, initial
 slti $t3, $s3, 48                 #invalid for anything below 0
@@ -96,6 +99,7 @@ bgt $s3, 119, ErrorInvalid   # illegal input, out of range
 
 #now I iterate again, this time to check for invalid input
 Move:
+addi $a0, $a0, 1 #iterates
 j verify #goes to verification point
 
 #first step of conversion, does the prerequisite work for translation 
