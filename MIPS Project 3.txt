@@ -4,6 +4,7 @@
   empty:   .asciiz "Input is empty."
    long:    .asciiz "Input is too long."
   invalid: .asciiz "Invalid base-33 number."
+.align  4
 .text
 ErrorLong:
 #prints message for input that is too long
