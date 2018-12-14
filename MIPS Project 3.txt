@@ -7,6 +7,12 @@
 
 .text
 .globl main
+ErrorLong:
+#prints message for input that is too long
+  la $a0, long
+  li $v0, 4
+  syscall
+  j end
 main:
 
 addi $sp, $sp, -16
