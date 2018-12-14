@@ -146,6 +146,13 @@ addi $sp, $sp, -12
 sw $ra, 0($sp)
 addi $a1, $a1, -1
 jal power
+mul $v0, $a0, $v0
+mult $v0,$s4 
+mflo $s4
+
+lw $ra, 0($sp)
+addi $sp, $sp, 12
+
 
 #second character
 two:
