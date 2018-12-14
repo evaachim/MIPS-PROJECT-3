@@ -66,6 +66,11 @@ Mici:
 addi $s7, $s7, -87  #conversion for lower case
 
 li $v0, 1
+move $a0, $t5  #moves content to $a0 so it can be printed
+syscall
+j Finish
+
+
 main:
   li $v0, 8
   la $a0, userInput
