@@ -65,6 +65,7 @@ j row
 Mici:
 addi $s7, $s7, -87  #conversion for lower case
 
+final:                  #final step
 li $v0, 1
 move $a0, $t5  #moves content to $a0 so it can be printed
 syscall
@@ -144,3 +145,6 @@ Finish:
 #last system call of the program will end program
 end:   #prints result
  li $v0, 10
+ syscall
+
+jr $ra
