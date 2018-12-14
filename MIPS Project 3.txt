@@ -30,11 +30,6 @@ ErrorEmpty:
 .globl main
 .globl Function
 
-	
-li $v0, 8
-  la $a0, userInput
-  li $a1, 200
-  jal power
 Function:
 #first step of conversion, does the prerequisite work for translation 
 initial:
