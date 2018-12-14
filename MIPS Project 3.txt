@@ -141,6 +141,7 @@ Mici:
 addi $s7, $s7, -87  #conversion for lower case
 
 row:  #determines which digit needs to be converted
+
 beq $s0, $s4, one  
 beq $s0, $s5, two
 beq $s0, $s6, three
