@@ -57,6 +57,11 @@ Mici:
 addi $s7, $s7, -87  #conversion for lower case
 
 li $v0, 1
+main:
+  li $v0, 8
+  la $a0, userInput
+  li $a1, 200
+  syscall
 
 Rid:
 #takes care of leading spaces
