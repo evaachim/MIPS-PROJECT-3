@@ -25,8 +25,11 @@ ErrorEmpty:
   li $v0, 4
   syscall
   j end
+
 main:
 
+	
+li $v0, 8
   la $a0, userInput
   li $a1, 200
   jal power
