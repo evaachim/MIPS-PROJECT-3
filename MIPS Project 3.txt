@@ -146,6 +146,7 @@ sw $ra, 0($sp)
 
 
 lb $s7, 0($a0)   #loads digits
+jal Function
 
 Finish:
 #last system call of the program will end program
