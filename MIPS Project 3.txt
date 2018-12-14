@@ -145,6 +145,10 @@ j translate
 
 #second character
 two:
+addi $sp, $sp, -12
+sw $ra, 0($sp)
+addi $a1, $a1, -1
+jal power
 
 three:
 j translate
