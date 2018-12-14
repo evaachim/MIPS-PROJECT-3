@@ -142,6 +142,10 @@ add $t5, $t5, $t7
 addi $s0, $s0, -1
 addi $a0, $a0, 1
 j translate
+addi $sp, $sp, -12
+sw $ra, 0($sp)
+addi $a1, $a1, -1
+jal power
 
 #second character
 two:
