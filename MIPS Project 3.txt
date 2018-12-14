@@ -146,6 +146,12 @@ beq $s0, $s5, two
 beq $s0, $s6, three
 beq $s0, $s1, last
 
+power:
+bne $a1, $zero, recursion
+li $v0, 1
+jr $ra
+
+recursion:
 one:
 addi $sp, $sp, -12
 sw $ra, 0($sp)
