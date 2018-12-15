@@ -1,6 +1,3 @@
-beq $s3, $t1, initial
-slti $t3, $s3, 48                 #invalid for anything below 0
-bne $t3, $zero, ErrorInvalid
 slti $t3, $s3, 58                 #legal input for everything less than or equal to 9
 bne $t3, $zero, Move
 slti $t3, $s3, 65                 #legal input for everything less than or equal to 65,  'a'
